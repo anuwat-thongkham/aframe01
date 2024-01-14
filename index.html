@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="me" src="images/me.jpg">
+        </a-assets>
+        <!-- Your 360 background image -->
+        <a-sky src="./images/background.jpeg"></a-sky>
+        <a-text value="My name's Anuwat Thongham" position="0 3 -3" color="#EF476F" align="center"></a-text>
+        <a-text value="643020060-0 Section 1" position="0 2.5 -3" color="#EF476F" align="center"></a-text>
+        <!-- Add a cubic entity with animation -->
+        <!-- Add a cubic entity with animation -->
+        <a-box position="-0 1.6 -5" color="#4CC3D9"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-box>
+        <a-box position="0 0 0" width="1" height="1"
+            animation="property: position; to: 0 3.2 -5; dur: 2000; easing: linear"
+            animation__2="property: rotation;; to: 0 360 0; dur: 5000; loop: true;" src="#me" material=""
+            geometry=""></a-box>
+
+        <!-- Add a camera to view the scene -->
+        <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+
+    </a-scene>
+</body>
+
+</html>
